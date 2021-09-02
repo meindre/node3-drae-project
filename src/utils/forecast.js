@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(body.error){
             callback('Unable to find your location, try another place !', undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions[0] + ' Temperature saat ini adalah ' + body.current.temperature + ' derajat di luar . Tapi terasa seperti ' + body.current.feelslike + ' derajat di luar')
+            callback(undefined,body.current.weather_descriptions[0] + ' Temperature saat ini adalah ' + body.current.temperature + ' derajat di luar dan kelembapan ' + body.current.humidity + ' . Tapi terasa seperti ' + body.current.feelslike + ' derajat di luar')
         }
     })
 }
